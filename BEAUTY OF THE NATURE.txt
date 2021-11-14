@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+	    h2 {
+        text-align: left;
+        font-size: 30px;
+		color: blue;
+	    }
+	    div {
+        text-align: center;
+	    }
+	    .slide-container{
+		    position:center;
+			
+		}
+        .slide img{
+            width:60%;
+			height:450px;
+		}
+		.effect{
+		    animation-name:effect;
+			animation-duration:ls;
+		}
+        @keyframes effect{
+            from{
+                opacity:0.6;
+            }
+            to{
+                opacity:1;
+            }				
+		}
+	</style>
+ </head>
+
+<body style="background-color:mediumspringgreen;">
+</font>
+	<h2>"COLORS ARE THE SMILES OF NATURE ..."</h2>
+    <div class="slide-container">
+	    <div class="effect slide">
+            <img src="img_sri1.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri2.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri3.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri4.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri5.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri6.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri7.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri8.jpg"/>
+		</div>
+		
+		<div class="effect slide">
+            <img src="img_sri9.jpg"/>
+		</div>
+	</div>
+
+<script>
+    var index=0;
+    show();
+    function show(){
+        var i;
+        var slides=document.getElementsByClassName("slide");
+        for(i=0;i<slides.length;i++){
+            slides[i].style.display=" none";
+	    }
+		
+		index=index+1;
+		if(index>slides.length){
+		    index=1;
+		}
+		slides[index-1].style.display="block";
+		setTimeout(show,1500);
+	}
+</script>	
+</body>
+</html>
